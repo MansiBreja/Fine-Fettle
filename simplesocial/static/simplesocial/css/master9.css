@@ -352,10 +352,15 @@ img {
 
 .container {
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
   max-width: 900px;
 }
-
+.sg-error-message,
+.sg-question-errorlist{
+	background: #FFC199; /*Change background color*/
+	border-left: 9px solid #FF6600; /*Change left border color*/
+	color: white; /*Change text color*/
+}
 header {
   color: white;
   background: #007ece;
@@ -489,6 +494,17 @@ section p {
     width: auto;
     margin: 0 auto;
   }
+}
+
+.hello{
+  padding: 15px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+	padding-top: 25px;
+	font-size: 20px;
+	margin: auto;
+	margin-top: 15px;
+
 }
 
 .features {

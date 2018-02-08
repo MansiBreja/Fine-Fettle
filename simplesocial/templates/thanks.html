@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% block headblock %}
+  <link rel="stylesheet" href="{% static 'simplesocial/css/instr.css' %}">
+{% endblock %}
+
 {% block content %}
 <h1>Thanks for visiting! Come back soon!</h1>
 

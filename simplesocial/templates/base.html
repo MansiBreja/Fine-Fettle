@@ -6,17 +6,17 @@
     <title>Clinical Trial</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'simplesocial/css/master3.css'%}">
+    <link rel="stylesheet" href="{% static 'simplesocial/css/master9.css' %}">
     {% block headblock %}
     {% endblock %}
 
@@ -25,13 +25,15 @@
 
     <nav class="navbar mynav" role="navigation" id="navbar">
     			<div class="container">
-            <a class="navbar-brand mynav" href="{% url 'home' %}">Home</a>
+            <a class="navbar-brand hello btn btn-default" href="{% url 'home' %}">HOME</a>
     					<ul class="nav navbar-nav navbar-right">
     						{% if user.is_authenticated %}
+                    <li><a href="{% url 'test' %}"><button type="button" class="btn btn-primary">Instructions</button></a></li>
                     <li><a href="{% url 'accounts:diagnosis' %}"><button type="button" class="btn btn-primary">Diagnosis</button></a></li>
                     <li><a href="{% url 'accounts:logout' %}"><button type="button" class="btn btn-primary">LogOut</button></a></li>
     						{% else %}
-    						      <li><a href="{% url 'accounts:login' %}"><button type="button" class="btn btn-primary">Login</button></a></li>
+
+                      <li><a href="{% url 'accounts:login' %}"><button type="button" class="btn btn-primary">Login</button></a></li>
                       <li><p></p></li>
     						      <li><a href="{% url 'accounts:signup' %}"><button type="button" class="btn btn-primary">Sign Up</button></a></li>
     						{% endif %}

@@ -22,9 +22,10 @@ body {
   /* background:$body-bg; */
   /* background: rgba(66, 188, 244,0.5); */
   background: #c1bdba;
-  background-image: url(https://image.freepik.com/free-vector/abstract-medical-background-in-blue-color_1017-11130.jpg);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxKffVkHu7cLhRr7yyj_Px-R9zb_Fm-FPOE4yBD5GnaPdyijsPw);
   /* background-repeat: no-repeat; */
   font-family: 'Titillium Web', sans-serif;
+	bacl: 50%;
 }
 
 .form {
@@ -33,9 +34,12 @@ body {
   padding: 40px;
   max-width:600px;
   margin:100px auto;
+	margin-top: 10px;
   border-radius:50px;
+	font-size: 15px;
+	color: white;
   /* box-shadow:0 4px 10px 4px rgba(#13232f,.3); */
-  box-shadow:0 4px 40px 4px red;
+  box-shadow:0 4px 40px 4px blue;
 }
 
 .button-block {
@@ -45,6 +49,7 @@ body {
 
 *, *:before, *:after {
   box-sizing: border-box;
+
 }
 
 a {
@@ -92,23 +97,29 @@ a {
   display:none;
 }
 
-
 h1 {
   text-align:center;
-  color:$white;
+  color:blue;
   font-weight:$thin;
-  margin:0 0 40px;
+   /* margin:0 0 20px ; */
+	 /* margin-top: 40px; */
+	/* text-decoration:underline; */
+	font-family: 'Roboto', sans-serif;
+	font-style: bold;
+	/* padding: 20px; */
 }
 
 label {
   position:absolute;
-  transform:translateY(6px);
-  left:13px;
-  color:rgba($white,.5);
+   transform:translateY(-45px);
+  /* left:13px; */
+  color:white;
   transition:all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
-  font-size:22px;
+  font-size:18px;
+	font-family: 'Cairo', sans-serif;
+	padding: 20px;
   .req {
   	margin:2px;
   	color:$main;
@@ -124,6 +135,18 @@ label.active {
   }
 }
 
+.hello{
+
+	padding: 15px;
+  padding-bottom: 45px;
+  margin-bottom: 20px;
+	padding-top: 25px;
+	font-size: 20px;
+	margin: auto;
+	margin-top: 15px;
+
+}
+
 label.highlight {
 	color:$white;
 }
@@ -132,6 +155,7 @@ input, textarea {
   font-size:22px;
   display:block;
   width:100%;
+	margin-top: 40px;
   height:100%;
   padding:5px 10px;
   background:none;
