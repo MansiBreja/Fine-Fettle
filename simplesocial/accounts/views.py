@@ -6,6 +6,9 @@ from accounts.models import DiagnosisInfo
 from accounts.forms import DiagnosisInfoForm
 from . import forms
 
+class HomePage(TemplateView):
+    template_name = "index.html"
+    
 class SignUp(CreateView):
     form_class = forms.UserCreateForm
     success_url = reverse_lazy("login")
