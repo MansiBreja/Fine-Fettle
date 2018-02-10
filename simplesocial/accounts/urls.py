@@ -8,6 +8,6 @@ urlpatterns = [
     url(r"^login/$", auth_views.LoginView.as_view(template_name="accounts/login.html"),name='login'),
     url(r"^logout/$", auth_views.LogoutView.as_view(), name="logout"),
     url(r"^signup/$", views.SignUp.as_view(), name="signup"),
-    url(r'^diagnosis_detail/new/$',views.CreateDiagnosisView.as_view(),name='diagnosis'),
+    url(r'^diagnosis_detail/new/$',views.diagnosis_view,name='diagnosis'),
     url(r'^result/$',views.Result.as_view(),name='res'),
 ]
