@@ -3,6 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from accounts.models import DiagnosisInfo
 from django import forms
 
+
+
 class UserCreateForm(UserCreationForm):
     class Meta:
         fields = ("username", "email", "password1", "password2")
@@ -15,6 +17,7 @@ class UserCreateForm(UserCreationForm):
 
 
 class DiagnosisInfoForm(forms.ModelForm):
+
     class Meta():
         model=DiagnosisInfo
         fields="__all__"

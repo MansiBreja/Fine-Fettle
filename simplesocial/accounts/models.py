@@ -35,33 +35,28 @@ class User(auth.models.User, auth.models.PermissionsMixin):
     def get_absolute_url(self):
         return reverse("home")
 
+Choice = (
+   ('Y', 'Yes'),
+   ('N', 'No')
+)
 
 class DiagnosisInfo(models.Model):
 
-    # u_name = models.ForeignKey('User');
-    bp_low = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
+    Sore_Throat = models.CharField(choices=Choice, max_length=128, null=True,  blank=True);
+    Diastolic_Blood_Pressure= models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
         validate_bp_low
         ]);
-    # bp_high = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
-    #         MaxValueValidator(20),
-    #         MinValueValidator(15)
-    #     ]);
-
-    bp_high = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
+    Systolic_Blood_Pressure= models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
             validate_bp_high
         ]);
-    resp_rate = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
+    Respiratory_rate = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
           validate_rr
         ]);
-    pulse_rate = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
+    Pulse_rate = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
          validate_pr
         ]);
-    temperature = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
+    Temperature = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
         validate_temp
-        ]);
-    BMI = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
-            MaxValueValidator(50),
-            MinValueValidator(10)
         ]);
 
     # def __str__(self):

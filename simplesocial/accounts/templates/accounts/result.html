@@ -3,7 +3,19 @@
 
 {% block content %}
 <div class="container">
-    <h1>{{ rs}}</h1>
+
     <h1>Result</h1>
+
+    {% if rs.0 == 0 %}
+        <h1>Healthy</h1>
+    {% elif rs.0 == 1 %}
+        <h1>Fever</h1>
+    {% elif rs.0 == 2 %}
+        <h1>Flu </h1>
+    {% elif rs.0 == 3 %}
+        <h1> Typhoid </h1>
+    {% else %}  
+        <h1> Ego Hurtt </h1>
+    {% endif %}
 </div>
 {% endblock %}
