@@ -25,7 +25,11 @@
 
     <nav class="navbar mynav" role="navigation" id="navbar">
     			<div class="container">
-            <a class="navbar-brand hello btn btn-default" href="{% url 'home' %}">HOME</a>
+            <a class="navbar-brand hello btn btn-default" href="{% url 'home' %}">
+              <span class='glyphicon glyphicon-home'>
+
+               </span>
+            </a>
     					<ul class="nav navbar-nav navbar-right">
     						{% if user.is_authenticated %}
                     <li><a href="{% url 'test' %}"><button type="button" class="btn btn-primary">Instructions</button></a></li>

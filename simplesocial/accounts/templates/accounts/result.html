@@ -1,21 +1,56 @@
 {% extends "base.html" %}
-{% load bootstrap3 %}
+{% load staticfiles %}
+{% block headblock %}
+  <!-- <link rel="stylesheet" href="{% static 'simplesocial/css/instr.css' %}"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-{% block content %}
-<div class="container">
+{% endblock %}
 
-    <h1>Result</h1>
+{% block fullscreen %}
 
+<header class="bg-image">
+
+  <Center>
+    <h1>RESULT</h1>
+    <br>
+  </Center>
+
+  <div class="container">
     {% if rs.0 == 0 %}
         <h1>Healthy</h1>
     {% elif rs.0 == 1 %}
         <h1>Fever</h1>
+        {% if val == 1 %}
+        <h1>Admiited</h1>
+        {% else %}
+        <h1>OPD</h1>
+        {% endif %}
     {% elif rs.0 == 2 %}
         <h1>Flu </h1>
+        {% if val == 1 %}
+        <h1>Admiited</h1>
+        {% else %}
+        <h1>OPD</h1>
+        {% endif %}
     {% elif rs.0 == 3 %}
-        <h1> Typhoid </h1>
-    {% else %}  
-        <h1> Ego Hurtt </h1>
+        <h1>Typhoid </h1>
+        {% if val == 1 %}
+        <h1>Admiited</h1>
+        {% else %}
+        <h1>OPD</h1>
+        {% endif %}
+    {% elif rs.0 == 4 %}
+        <h1>Hypertension </h1>
+        {% if val == 1 %}
+        <h1>Admiited</h1>
+        {% else %}
+        <h1>OPD</h1>
+        {% endif %}
+    {% else %}
+        <h1>Error </h1>
     {% endif %}
-</div>
+ </div>
+  </header>
+
 {% endblock %}

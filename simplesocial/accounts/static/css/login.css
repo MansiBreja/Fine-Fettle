@@ -34,7 +34,7 @@ body {
   padding: 40px;
   max-width:600px;
   margin:100px auto;
-	margin-top: 10px;
+	margin-top: 40px;
   border-radius:50px;
 	font-size: 15px;
 	color: white;
@@ -158,6 +158,7 @@ input, textarea {
   display:block;
   width:100%;
 	margin-top: 40px;
+	margin-bottom: 20px;
   height:100%;
   padding:5px 10px;
   background:none;
@@ -165,7 +166,7 @@ input, textarea {
   border:1px solid $gray-light;
   color:$white;
   border-radius:0;
-	padding-top: 20px;
+	/* padding-top: 20px; */
   transition:border-color .25s ease, box-shadow .25s ease;
   &:focus {
 		outline:0;
@@ -221,4 +222,8 @@ textarea {
 .forgot {
   margin-top:-20px;
   text-align:right;
+}
+
+.form-control{
+	margin-top:35px;
 }

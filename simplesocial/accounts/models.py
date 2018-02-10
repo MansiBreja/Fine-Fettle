@@ -42,7 +42,6 @@ Choice = (
 
 class DiagnosisInfo(models.Model):
 
-    Sore_Throat = models.CharField(choices=Choice, max_length=128, null=True,  blank=True);
     Diastolic_Blood_Pressure= models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
         validate_bp_low
         ]);
@@ -58,8 +57,14 @@ class DiagnosisInfo(models.Model):
     Temperature = models.DecimalField(max_digits=5, decimal_places=2, default="", validators=[
         validate_temp
         ]);
+    Sore_Throat = models.CharField(max_length=10, choices=Choice, null=True,  blank=True);
+
+    Rashes = models.CharField(max_length=10, choices=Choice, null=True,  blank=True);
+
+    Stomach_Pain = models.CharField(max_length=10, choices=Choice , null=True,  blank=True);
 
     # def __str__(self):
     #      return self.u_name
+
     def get_absolute_url(self):
         return reverse("accounts:res")
