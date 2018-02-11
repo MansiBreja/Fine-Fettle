@@ -1,0 +1,13 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:200px;
+    width:250px;
+    /* width: 50%; */
+
+}
+
+h2{
+  color:red;
+}
