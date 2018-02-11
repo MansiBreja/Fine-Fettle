@@ -64,7 +64,7 @@ def diagnosis_view(request):
             e=form.cleaned_data['Respiratory_rate']
 
             ftemp=form.cleaned_data['Sore_Throat']
-            gtemp=form.cleaned_data['Constipation']
+            gtemp=form.cleaned_data['Stomach_Pain']
             htemp=form.cleaned_data['Rashes']
 
             if ftemp =='Y':
@@ -81,7 +81,7 @@ def diagnosis_view(request):
                 h=1
             else:
                 h=0
-            dataset = pd.read_csv('0126.csv')
+            dataset = pd.read_csv('0455.csv')
             X = dataset.iloc[:, :-1].values
             y = dataset.iloc[:,8].values
             #X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=0)
@@ -121,6 +121,11 @@ def diagnosis_view(request):
                     val=1
                 else:
                     val=0
+            elif y_pred[0] == 5:
+                if a <= 85:
+                    val=1
+                else:
+                    val=0        
             else:
                 val=-1
 

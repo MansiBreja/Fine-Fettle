@@ -23,7 +23,8 @@ body {
   /* background: rgba(66, 188, 244,0.5); */
   background: #c1bdba;
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxKffVkHu7cLhRr7yyj_Px-R9zb_Fm-FPOE4yBD5GnaPdyijsPw);
-  /* background-repeat: no-repeat; */
+   /* background-repeat: no-repeat; */
+	 /* background-image: url('images/backgrnd.jpg'); */
   font-family: 'Titillium Web', sans-serif;
 	bacl: 50%;
 }

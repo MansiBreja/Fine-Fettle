@@ -21,13 +21,21 @@
         <h1>Healthy</h1>
     {% elif rs.0 == 1 %}
         <h1>Fever</h1>
+        <h2>Treatments vary depending on the cause of the fever. For example, antibiotics would be used for a bacterial infection such as strep throat.
+         The most common treatments for fever include over-the-counter drugs such as acetaminophen (Tylenol) and nonsteroidal anti-inflammatory drugs such ibuprofen (Advil, Motrin) and naproxen (Aleve). Children and teens should not take aspirin.
+        </h2>
         {% if val == 1 %}
-        <h1>Admiited</h1>
+        <h1>Admitted</h1>
         {% else %}
         <h1>OPD</h1>
         {% endif %}
-    {% elif rs.0 == 2 %}
+        {% elif rs.0 == 2 %}
         <h1>Flu </h1>
+        <h2>The flu treatment you should take depends on your symptoms. For example, if you have nasal or sinus congestion, then a decongestant can be helpful.
+
+          Decongestants come in oral or nasal spray forms.
+
+          If you have a runny nose, postnasal drip, or itchy, watery eyes -- then an antihistamine may be helpful for your flu symptoms. </h2>
         {% if val == 1 %}
         <h1>Admiited</h1>
         {% else %}
@@ -35,6 +43,7 @@
         {% endif %}
     {% elif rs.0 == 3 %}
         <h1>Typhoid </h1>
+        <h2>Typhoid fever is treated with antibiotics which kill the Salmonella bacteria. Prior to the use of antibiotics, the fatality rate was 20%. Death occurred from overwhelming infection, pneumonia, intestinal bleeding, or intestinal perforation. With antibiotics and supportive care, mortality has been reduced to 1%-2%. With appropriate antibiotic therapy, there is usually improvement within one to two days and recovery within seven to 10 days.</h2>
         {% if val == 1 %}
         <h1>Admiited</h1>
         {% else %}
@@ -42,15 +51,37 @@
         {% endif %}
     {% elif rs.0 == 4 %}
         <h1>Hypertension </h1>
+        <h2>Drugs to Treat High Blood Pressure
+        There are several types of drugs used to treat high blood pressure, including:
+       <li>
+      Angiotensin-converting enzyme (ACE) inhibitors</li>
+      <li>Angiotensin II receptor blockers (ARBs)</li>
+      <li>Diuretics</li>
+      <li>Beta-blockers</li>
+      <li>Calcium channel blockers</li>
+      <li>Alpha-blockers</li>
+      <li>Alpha-agonists</li>
+      <li>Renin inhibitors</li>
+      <li>Combination medications</li>
+      <li>Diuretics are often recommended as the first line of therapy for most people who have high blood pressure.
+        However, your doctor may start a medicine other than a diuretic as the first line of therapy if you have certain medical problems. For example, ACE inhibitors are often a choice for a people with diabetes. If one drug doesn't work or is disagreeable, additional medications or alternative medications may be recommended.
+        </h2>
         {% if val == 1 %}
         <h1>Admiited</h1>
+        {% else %}
+        <h1>OPD</h1>
+        {% endif %}
+    {% elif rs.0 == 5 %}
+        <h1> Hypotension </h1>
+        {% if val == 1 %}
+        <h1>Admitted</h1>
         {% else %}
         <h1>OPD</h1>
         {% endif %}
     {% else %}
         <h1>Error </h1>
     {% endif %}
- </div>
-  </header>
+    </div>
+    </header>
 
-{% endblock %}
+   {% endblock %}
