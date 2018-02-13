@@ -9,7 +9,7 @@
     <header class="bg-image">
 
       <Center>
-      <h3>Welcome to Care and Cure!</h3>
+      <h3>FINE FETTLE</h3>
       </Center>
       <h2>The future of healthcare...</h2>
       <div class="container">
@@ -76,9 +76,15 @@
     There are several parameters such as blood pressure, body temperature, pulse rate, respiratory rate, sore throat, stomach pain and rashes which are easy to detect and can be really helpful in the diagnosis of the level of severity for medical conditions such as Flu, Typhoid, Fever, Hypertension nd Hypotension. Although the parameters are well known and easy to measure, several people lack the knowledge and resources required for diagnosis.
   </h4>
   <br><br><br>
+    {% if user.is_authenticated %}
     <h4>
       Go to  <a href="{% url 'test' %}">  INSTRUCTIONS  </a>  for help or begin your  <a href="{% url 'accounts:diagnosis' %}"> DIAGNOSIS </a>  right now!
   </h4>
+    {% else %}
+    <h4>
+        Go to  <a href="{% url 'test' %}">  INSTRUCTIONS  </a>  for help! Login or Sign-up for free to get started!
+    </h4>
+    {% endif %}
     <br><br><br>
   </div>
 </section>
