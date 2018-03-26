@@ -60,4 +60,4 @@ Enter the command: "python manage.py runserver"
 Copy the url and paste it in your favourite browser window.
 ```
 
-This project was made by collectively by [Kavita Maurya](https://github.com/Kavita309), [Mansi Breja](https://github.com/MansiBreja) and [Karan](https://github.com/karans785) as a part of the Hackeam Hackathon, NSIT, Delhi. 
+This project was made collectively by [Kavita Maurya](https://github.com/Kavita309), [Mansi Breja](https://github.com/MansiBreja) and [Karan](https://github.com/karans785) as a part of the Hackeam Hackathon, NSIT, Delhi. 
